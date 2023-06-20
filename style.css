@@ -173,7 +173,7 @@
         height: 100vh;
         padding: 0 2em 2em 2em;
         border-radius: 0;
-        gap: 0;
+        gap: 2em;
     }
     .container #imageDesign{
         width: 100vw;
