@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+/* ## Colors */
+
+/* ### Primary */
+
+--Tomato: hsl(4, 100%, 67%);
+/* 
+### Neutral */
+
+--Dark_Slate_Grey: hsl(234, 29%, 20%);
+--Charcoal_Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+}
+
+
+
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+    }
+
+    html{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--Dark_Slate_Grey);
+        
+    }
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: var(--White);
+        width: 55rem;
+        height: 35rem;
+        padding: 2em;
+        gap:2em;
+        border-radius: 2em;
+        transition: 0.2s;
+    }
+    .container #imageDesign{
+        width: 100vw;
+        height: 100%;    
+        background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+        background-size:cover;
+        border-radius: 2rem;
+    }
+    
+    #contents{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw;
+        height: 100%;
+        gap: 1.4em;
+        padding: 1em;
+    }
+
+    .label-email,li,.contents,h1{
+        color: var(--Dark_Slate_Grey)
+    }
+    
+    h1{
+        font-size: 38px;
+    }
+
+    .list-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    li{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: center;
+        gap: 1em;
+        font-size: 16px;
+        
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap:1.3em;
+    }
+    .label-email{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.4em;
+    }
+    .label-email span{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 0.8em;
+        font-weight: 700;
+        
+    }
+
+    .label-email input{
+        width: 100%;
+        height: 3.5rem;
+        padding: 1em;
+        border-radius: 0.5em;
+        border: 1pt solid var(--Grey);
+        font-size: 1em;
+        color: var(--Grey);
+    }
+    .label-email input:focus{
+        border:1pt solid var(--Dark_Slate_Grey);
+        outline: none;
+    }
+
+    button{
+        width: 100%;
+        height: 3.5rem;
+        margin-bottom: 1em;
+        border: none;
+        background-color: var(--Dark_Slate_Grey);
+        border-radius: 0.5em;
+        color: var(--White);
+        font-weight: 700;
+        font-size: 1em;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    button:hover{
+        background: linear-gradient(160deg, #FF576E,#FF6546);
+        transition: 0.2s;
+    }
+
+    
+    .spans{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .error{
+        color: var(--Tomato);
+    }
+
+@media screen and (max-width:930px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--White);
+        width: 100vw;
+        height: 100vh;
+        padding: 0 2em 2em 2em;
+        border-radius: 0;
+        gap: 0;
+    }
+    .container #imageDesign{
+        width: 100vw;
+        height: 70vh;    
+        background-image: url("/assets/images/illustration-sign-up-mobile.svg");
+        background-size:cover;
+        border-radius: 0 0 2em 2em ;
+    }
+    
+    #contents{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw;
+        height: 70vh;
+        gap: 1.4em;
+        padding: 1.5em;
+    }
+}
